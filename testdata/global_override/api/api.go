@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/swaggo/swag/testdata/alias_type/types"
-	"github.com/swaggo/swag/testdata/global_override/data"
+	"github.com/edocevol/swag/testdata/alias_type/types"
+	"github.com/edocevol/swag/testdata/global_override/data"
 )
 
 // @Summary Get application
@@ -25,5 +25,5 @@ func GetApplication(w http.ResponseWriter, r *http.Request) {
 		},
 	}
 	log.Println(foo)
-	//write your code
+	// write your code
 }

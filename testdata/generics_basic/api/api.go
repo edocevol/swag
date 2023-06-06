@@ -3,8 +3,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/swaggo/swag/testdata/generics_basic/types"
-	"github.com/swaggo/swag/testdata/generics_basic/web"
+	"github.com/edocevol/swag/testdata/generics_basic/types"
+	"github.com/edocevol/swag/testdata/generics_basic/web"
 )
 
 type Response[T any, X any] struct {
@@ -34,7 +34,7 @@ type StringStruct struct {
 // @Failure 404 {object} web.APIError "Can not find ID"
 // @Router /posts/ [post]
 func GetPost(w http.ResponseWriter, r *http.Request) {
-	//write your code
+	// write your code
 	_ = web.GenericResponse[types.Post]{}
 }
 
@@ -49,7 +49,7 @@ func GetPost(w http.ResponseWriter, r *http.Request) {
 // @Success 222 {object} web.GenericResponseMulti[types.Post, types.Post]
 // @Router /posts-multi/ [post]
 func GetPostMulti(w http.ResponseWriter, r *http.Request) {
-	//write your code
+	// write your code
 	_ = web.GenericResponse[types.Post]{}
 }
 
@@ -63,6 +63,6 @@ func GetPostMulti(w http.ResponseWriter, r *http.Request) {
 // @Success 222 {object} web.GenericResponseMulti[[]types.Post, [][]types.Post]
 // @Router /posts-multis/ [post]
 func GetPostArray(w http.ResponseWriter, r *http.Request) {
-	//write your code
+	// write your code
 	_ = web.GenericResponse[types.Post]{}
 }

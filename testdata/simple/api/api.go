@@ -3,8 +3,7 @@ package api
 import (
 	"net/http"
 
-	. "github.com/swaggo/swag/testdata/simple/cross"
-	_ "github.com/swaggo/swag/testdata/simple/web"
+	_ "github.com/edocevol/swag/testdata/simple/web"
 )
 
 // @Summary Add a new pet to the store
@@ -20,7 +19,7 @@ import (
 // @Router /testapi/get-string-by-int/{some_id} [get]
 func GetStringByInt(w http.ResponseWriter, r *http.Request) {
 	_ = Cross{}
-	//write your code
+	// write your code
 }
 
 // @Description get struct array by ID
@@ -44,7 +43,7 @@ func GetStringByInt(w http.ResponseWriter, r *http.Request) {
 // @Security OAuth2Implicit[read, write] || Firebase
 // @Router /testapi/get-struct-array-by-string/{some_id} [get]
 func GetStructArrayByString(w http.ResponseWriter, r *http.Request) {
-	//write your code
+	// write your code
 }
 
 // @Summary Upload file
@@ -60,7 +59,7 @@ func GetStructArrayByString(w http.ResponseWriter, r *http.Request) {
 // @Failure 403 {object} Cross "cross"
 // @Router /file/upload [post]
 func Upload(w http.ResponseWriter, r *http.Request) {
-	//write your code
+	// write your code
 }
 
 // @Summary use Anonymous field
