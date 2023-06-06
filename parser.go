@@ -854,7 +854,9 @@ func processRouterOperation(parser *Parser, operation *Operation) error {
 					// This path param is not actually contained in the path, skip adding it to the final params
 					continue
 				}
-				param.Required = true
+				if param.In == "path" {
+					param.Required = true
+				}
 				validParams = append(validParams, param)
 			}
 			newOp.Operation.OperationProps.Parameters = validParams
